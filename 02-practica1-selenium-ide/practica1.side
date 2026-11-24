@@ -27,7 +27,7 @@
         {
           "id": "89a02251-0888-450d-b658-0d1cb8003896",
           "comment": "",
-          "command": "type",
+          "command": "sendKeys",
           "target": "//input[@id='user-name']",
           "targets": [
             [
@@ -40,7 +40,7 @@
         {
           "id": "e9245660-e7de-4a36-b2b6-ba5574ec597e",
           "comment": "",
-          "command": "type",
+          "command": "sendKeys",
           "target": "//input[@id='password']",
           "targets": [
             [
@@ -101,7 +101,7 @@
         {
           "id": "a9feadd7-1635-45e4-a4e2-0edc308b1397",
           "comment": "",
-          "command": "type",
+          "command": "sendKeys",
           "target": "//input[@id='username']",
           "targets": [
             [
@@ -114,7 +114,7 @@
         {
           "id": "da98b67f-7c91-4951-9c3d-4ad9d6414304",
           "comment": "",
-          "command": "type",
+          "command": "sendKeys",
           "target": "//input[@id='password']",
           "targets": [
             [
@@ -188,7 +188,7 @@
         {
           "id": "1b0ed9f3-a094-4a1b-af7f-654aa4dd18ab",
           "comment": "",
-          "command": "type",
+          "command": "sendKeys",
           "target": "//input[@id='user-name']",
           "targets": [
             [
@@ -201,7 +201,7 @@
         {
           "id": "71063040-f592-4be0-8c32-7f4bac3a6a69",
           "comment": "",
-          "command": "type",
+          "command": "sendKeys",
           "target": "//input[@id='password']",
           "targets": [
             [
