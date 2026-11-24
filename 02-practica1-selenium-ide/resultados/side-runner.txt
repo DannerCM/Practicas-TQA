@@ -2,20 +2,20 @@
 [32minfo[39m: Finished test Login correcto SauceDemo Success
 [32minfo[39m: Running test Login incorrecto the-internet
 [32minfo[39m: Finished test Login incorrecto the-internet Success
-[32minfo[39m: Running test Agregar al carrito SauceDemo
-[32minfo[39m: Finished test Agregar al carrito SauceDemo Success
-PASS ./node_modules/selenium-side-runner/dist/main.test.js (5.267 s)
+[32minfo[39m: Running test Búsqueda de productos AutomationExercise
+[32minfo[39m: Finished test Búsqueda de productos AutomationExercise Success
+PASS node_modules/selenium-side-runner/dist/main.test.js (9.306 s)
   Running project practica1
     Running suite Practica 1
-      √ Running test Login correcto SauceDemo (1043 ms)
-      √ Running test Login incorrecto the-internet (2195 ms)
-      √ Running test Agregar al carrito SauceDemo (1230 ms)
+      √ Running test Login correcto SauceDemo (1185 ms)
+      √ Running test Login incorrecto the-internet (2188 ms)
+      √ Running test Búsqueda de productos AutomationExercise (5185 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       3 passed, 3 total
 Snapshots:   0 total
-Time:        5.355 s, estimated 6 s
-Ran all test suites within paths ".\node_modules\selenium-side-runner\dist\main.test.js".
+Time:        9.391 s
+Ran all test suites within paths "node_modules\selenium-side-runner\dist\main.test.js".
 Jest did not exit one second after the test run has completed.
 
 'This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.

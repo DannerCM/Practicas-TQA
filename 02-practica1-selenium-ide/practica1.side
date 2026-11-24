@@ -167,18 +167,18 @@
     },
     {
       "id": "7df1c4bc-2770-4610-8e90-5618a8096dba",
-      "name": "Agregar al carrito SauceDemo",
+      "name": "Búsqueda de productos AutomationExercise",
       "commands": [
         {
-          "id": "c510811a-96a5-437a-915e-ada6b09aa3ed",
+          "id": "ad7d2eb7-102a-439a-b37e-3fa42939d9d3",
           "comment": "",
           "command": "open",
-          "target": "https://www.saucedemo.com/",
+          "target": "https://automationexercise.com/products",
           "targets": [],
           "value": ""
         },
         {
-          "id": "a468bfc7-5d8a-43e3-98af-9dfb50829450",
+          "id": "7fa974e4-36ec-4b87-ada7-830f92688975",
           "comment": "",
           "command": "setWindowSize",
           "target": "1280x800",
@@ -186,69 +186,56 @@
           "value": ""
         },
         {
-          "id": "1b0ed9f3-a094-4a1b-af7f-654aa4dd18ab",
+          "id": "ced035a8-c721-4dba-aa51-83357f685eb7",
           "comment": "",
           "command": "sendKeys",
-          "target": "//input[@id='user-name']",
+          "target": "//input[@id='search_product']",
           "targets": [
             [
-              "//input[@id='user-name']",
+              "//input[@id='search_product']",
               "xpath:position"
             ]
           ],
-          "value": "standard_user"
+          "value": "shirt"
         },
         {
-          "id": "71063040-f592-4be0-8c32-7f4bac3a6a69",
-          "comment": "",
-          "command": "sendKeys",
-          "target": "//input[@id='password']",
-          "targets": [
-            [
-              "//input[@id='password']",
-              "xpath:position"
-            ]
-          ],
-          "value": "secret_sauce"
-        },
-        {
-          "id": "8f1960d1-7b4a-442b-90c8-859d0a70660b",
+          "id": "c7ad5c0e-4450-43d6-b59a-63ea21aaa2b0",
           "comment": "",
           "command": "click",
-          "target": "//input[@id='login-button']",
+          "target": "//button[@id='submit_search']",
           "targets": [
             [
-              "//input[@id='login-button']",
+              "//button[@id='submit_search']",
               "xpath:position"
             ]
           ],
           "value": ""
         },
         {
-          "id": "606cbe9e-acb8-485a-815e-dc1815298b36",
+          "id": "6cbd8ac9-ce07-4760-958a-ad277a6b863e",
           "comment": "",
-          "command": "click",
-          "target": "//button[@id='add-to-cart-sauce-labs-backpack']",
+          "command": "assertElementPresent",
+          "target": "//h2[contains(@class,'title') and contains(.,'Searched Products')]",
           "targets": [
             [
-              "//button[@id='add-to-cart-sauce-labs-backpack']",
+              "//h2[contains(@class,'title') and contains(.,'Searched Products')]",
               "xpath:position"
             ]
           ],
           "value": ""
         },
         {
-          "id": "86cdb7d1-510f-4f8f-9511-381bd4ddb45d",
+          "id": "8517f14c-7490-4b70-b816-eba5ad8858f0",
           "comment": "",
-          "command": "assertText",
-          "target": "//span[@class='shopping_cart_badge']",
+          "command": "assertElementPresent",
+          "target": "//div[@class='productinfo text-center']/p[contains(translate(.,'SHIRT','shirt'),'shirt')]",
           "targets": [
             [
-              "//span[@class='shopping_cart_badge']",
+              "//div[@class='productinfo text-center']/p[contains(translate(.,'SHIRT','shirt'),'shirt')]",
               "xpath:position"
             ]
           ],
-          "value": "1"
+          "value": ""
         }
       ]
     }
@@ -269,7 +256,8 @@
   ],
   "urls": [
     "https://www.saucedemo.com/",
-    "https://the-internet.herokuapp.com/"
+    "https://the-internet.herokuapp.com/",
+    "https://automationexercise.com/"
   ],
   "plugins": []
 }
