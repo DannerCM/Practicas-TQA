@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.13.3 on win32)" generated="2026-11-24T10:42:50.166988" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="04-practica3-robot\tests">
+<suite id="s1-s1" name="Practica3" source="04-practica3-robot\tests\practica3.robot">
+<test id="s1-s1-t1" name="Ejercicio 1 Login Correcto En SauceDemo" line="7">
+<kw name="Abrir Navegador En" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:50.524831" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${url}</arg>
+<arg>${NAVEGADOR}</arg>
+<arg>options=add_argument("--window-size=1280,900")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T10:42:50.524619" elapsed="0.764144"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.288991" elapsed="0.000923"/>
+</kw>
+<arg>${URL_SAUCEDEMO}</arg>
+<status status="PASS" start="2026-11-24T10:42:50.523837" elapsed="0.766197"/>
+</kw>
+<kw name="Iniciar Sesion En SauceDemo" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:51.290880" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.290554" elapsed="0.066342"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:51.357583" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${clave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.357126" elapsed="0.045386"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:51.402875" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.402674" elapsed="0.050345"/>
+</kw>
+<arg>${USUARIO_SAUCE}</arg>
+<arg>${CLAVE_SAUCE}</arg>
+<status status="PASS" start="2026-11-24T10:42:51.290210" elapsed="0.162924"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:51.487036" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>${URL_INVENTARIO}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.453264" elapsed="0.033859"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:51.487483" level="INFO">Verifying element 'class=title' contains exact text 'Products'.</msg>
+<arg>class=title</arg>
+<arg>Products</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.487277" elapsed="0.017047"/>
+</kw>
+<kw name="Capturar Pantalla" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:51.808555" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../capturas/ejercicio1-login-correcto.png"&gt;&lt;img src="../capturas/ejercicio1-login-correcto.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${CARPETA_CAPTURAS}${/}${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.504826" elapsed="0.303851"/>
+</kw>
+<arg>ejercicio1-login-correcto</arg>
+<status status="PASS" start="2026-11-24T10:42:51.504537" elapsed="0.304264"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-24T10:42:51.809010" elapsed="2.141816"/>
+</kw>
+<status status="PASS" start="2026-11-24T10:42:50.523281" elapsed="3.427672"/>
+</test>
+<test id="s1-s1-t2" name="Ejercicio 2 Login Incorrecto En The Internet" line="14">
+<kw name="Abrir Navegador En" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:53.952230" level="INFO">Opening browser 'headlesschrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${NAVEGADOR}</arg>
+<arg>options=add_argument("--window-size=1280,900")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T10:42:53.952059" elapsed="1.584311"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.536670" elapsed="0.000964"/>
+</kw>
+<arg>${URL_HEROKU_LOGIN}</arg>
+<status status="PASS" start="2026-11-24T10:42:53.951678" elapsed="1.586041"/>
+</kw>
+<kw name="Iniciar Sesion En Heroku" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:55.538550" level="INFO">Typing text 'usuario_inexistente' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.538265" elapsed="0.068394"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:55.607119" level="INFO">Typing text 'clave_incorrecta' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${clave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.606872" elapsed="0.049156"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:55.656397" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.656199" elapsed="0.300459"/>
+</kw>
+<arg>${USUARIO_INVALIDO}</arg>
+<arg>${CLAVE_INVALIDA}</arg>
+<status status="PASS" start="2026-11-24T10:42:55.537903" elapsed="0.418877"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:55.970265" level="INFO">Element 'id=flash' contains text 'Your username is invalid!'.</msg>
+<arg>id=flash</arg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.956922" elapsed="0.013427"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:55.975368" level="INFO">Current location contains '/login'.</msg>
+<arg>/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.970506" elapsed="0.004966"/>
+</kw>
+<kw name="Capturar Pantalla" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:56.032365" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../capturas/ejercicio2-login-incorrecto.png"&gt;&lt;img src="../capturas/ejercicio2-login-incorrecto.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${CARPETA_CAPTURAS}${/}${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-24T10:42:55.976040" elapsed="0.056438"/>
+</kw>
+<arg>ejercicio2-login-incorrecto</arg>
+<status status="PASS" start="2026-11-24T10:42:55.975721" elapsed="0.056869"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-24T10:42:56.032838" elapsed="2.114826"/>
+</kw>
+<status status="PASS" start="2026-11-24T10:42:53.951289" elapsed="4.196609"/>
+</test>
+<test id="s1-s1-t3" name="Ejercicio 3 Agregar Producto Al Carrito En SauceDemo" line="21">
+<kw name="Abrir Navegador En" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:58.149164" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${url}</arg>
+<arg>${NAVEGADOR}</arg>
+<arg>options=add_argument("--window-size=1280,900")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T10:42:58.148984" elapsed="0.794859"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-24T10:42:58.944017" elapsed="0.000727"/>
+</kw>
+<arg>${URL_SAUCEDEMO}</arg>
+<status status="PASS" start="2026-11-24T10:42:58.148569" elapsed="0.796252"/>
+</kw>
+<kw name="Iniciar Sesion En SauceDemo" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:58.945409" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:58.945218" elapsed="0.067387"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.013044" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${clave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.012801" elapsed="0.058783"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.072016" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.071807" elapsed="0.049338"/>
+</kw>
+<arg>${USUARIO_SAUCE}</arg>
+<arg>${CLAVE_SAUCE}</arg>
+<status status="PASS" start="2026-11-24T10:42:58.944954" elapsed="0.176291"/>
+</kw>
+<kw name="Agregar Producto Al Carrito" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.121932" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.121677" elapsed="0.071526"/>
+</kw>
+<status status="PASS" start="2026-11-24T10:42:59.121420" elapsed="0.071885"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.193649" level="INFO">Verifying element 'class=shopping_cart_badge' contains exact text '1'.</msg>
+<arg>class=shopping_cart_badge</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.193423" elapsed="0.011992"/>
+</kw>
+<kw name="Abrir Carrito" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.206048" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<arg>class=shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.205871" elapsed="0.034213"/>
+</kw>
+<status status="PASS" start="2026-11-24T10:42:59.205628" elapsed="0.034556"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.240533" level="INFO">Verifying element 'class=inventory_item_name' contains exact text 'Sauce Labs Backpack'.</msg>
+<arg>class=inventory_item_name</arg>
+<arg>${PRODUCTO}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.240305" elapsed="0.009722"/>
+</kw>
+<kw name="Capturar Pantalla" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-24T10:42:59.518071" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../capturas/ejercicio3-carrito.png"&gt;&lt;img src="../capturas/ejercicio3-carrito.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${CARPETA_CAPTURAS}${/}${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.250482" elapsed="0.267674"/>
+</kw>
+<arg>ejercicio3-carrito</arg>
+<status status="PASS" start="2026-11-24T10:42:59.250215" elapsed="0.268024"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-24T10:42:59.518409" elapsed="2.135998"/>
+</kw>
+<status status="PASS" start="2026-11-24T10:42:58.148180" elapsed="3.506352"/>
+</test>
+<doc>Practica 3: tres ejercicios con Robot Framework y SeleniumLibrary.</doc>
+<status status="PASS" start="2026-11-24T10:42:50.206080" elapsed="11.448848"/>
+</suite>
+<status status="PASS" start="2026-11-24T10:42:50.168288" elapsed="11.487124"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
+<stat name="Practica3" id="s1-s1" pass="3" fail="0" skip="0">Tests.Practica3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
