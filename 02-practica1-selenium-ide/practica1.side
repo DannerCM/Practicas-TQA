@@ -1,0 +1,275 @@
+{
+  "id": "df414e2b-0e20-4776-8774-1b59203ae2b0",
+  "version": "2.0",
+  "name": "practica1",
+  "url": "https://www.saucedemo.com",
+  "tests": [
+    {
+      "id": "0b584b23-b4e7-486e-9889-c35a258c6f9d",
+      "name": "Login correcto SauceDemo",
+      "commands": [
+        {
+          "id": "4f04b3fa-5586-4112-af0c-c9a9389be746",
+          "comment": "",
+          "command": "open",
+          "target": "https://www.saucedemo.com/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fdec5c43-6137-4199-abd2-2e6183db0f97",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "1280x800",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "89a02251-0888-450d-b658-0d1cb8003896",
+          "comment": "",
+          "command": "type",
+          "target": "//input[@id='user-name']",
+          "targets": [
+            [
+              "//input[@id='user-name']",
+              "xpath:position"
+            ]
+          ],
+          "value": "standard_user"
+        },
+        {
+          "id": "e9245660-e7de-4a36-b2b6-ba5574ec597e",
+          "comment": "",
+          "command": "type",
+          "target": "//input[@id='password']",
+          "targets": [
+            [
+              "//input[@id='password']",
+              "xpath:position"
+            ]
+          ],
+          "value": "secret_sauce"
+        },
+        {
+          "id": "180fee5f-063c-42a4-b057-1c5469141805",
+          "comment": "",
+          "command": "click",
+          "target": "//input[@id='login-button']",
+          "targets": [
+            [
+              "//input[@id='login-button']",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "9994b524-a727-42d8-b4e0-c58bceeb1431",
+          "comment": "",
+          "command": "assertText",
+          "target": "//span[@class='title']",
+          "targets": [
+            [
+              "//span[@class='title']",
+              "xpath:position"
+            ]
+          ],
+          "value": "Products"
+        }
+      ]
+    },
+    {
+      "id": "cf6d3518-8ce9-499a-9a3d-10cbc903106f",
+      "name": "Login incorrecto the-internet",
+      "commands": [
+        {
+          "id": "5bf4bf2d-0f21-465c-a190-931fb9ddcb85",
+          "comment": "",
+          "command": "open",
+          "target": "https://the-internet.herokuapp.com/login",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "23e5df8c-e500-41b3-a0d3-fc0c80fedd31",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "1280x800",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a9feadd7-1635-45e4-a4e2-0edc308b1397",
+          "comment": "",
+          "command": "type",
+          "target": "//input[@id='username']",
+          "targets": [
+            [
+              "//input[@id='username']",
+              "xpath:position"
+            ]
+          ],
+          "value": "usuario_falso"
+        },
+        {
+          "id": "da98b67f-7c91-4951-9c3d-4ad9d6414304",
+          "comment": "",
+          "command": "type",
+          "target": "//input[@id='password']",
+          "targets": [
+            [
+              "//input[@id='password']",
+              "xpath:position"
+            ]
+          ],
+          "value": "clave_falsa"
+        },
+        {
+          "id": "9d20db1c-6bd8-4152-a50d-13a60391f22a",
+          "comment": "",
+          "command": "click",
+          "target": "//button[@type='submit']",
+          "targets": [
+            [
+              "//button[@type='submit']",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "3ac86214-1cf6-4971-b703-fe7624a55670",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "//div[@id='flash'][contains(.,'invalid')]",
+          "targets": [
+            [
+              "//div[@id='flash'][contains(.,'invalid')]",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "71eaeb96-c212-40ab-877b-d783f32a416b",
+          "comment": "",
+          "command": "assertText",
+          "target": "//div[@id='flash']",
+          "targets": [
+            [
+              "//div[@id='flash']",
+              "xpath:position"
+            ]
+          ],
+          "value": "Your username is invalid!\n×"
+        }
+      ]
+    },
+    {
+      "id": "7df1c4bc-2770-4610-8e90-5618a8096dba",
+      "name": "Agregar al carrito SauceDemo",
+      "commands": [
+        {
+          "id": "c510811a-96a5-437a-915e-ada6b09aa3ed",
+          "comment": "",
+          "command": "open",
+          "target": "https://www.saucedemo.com/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a468bfc7-5d8a-43e3-98af-9dfb50829450",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "1280x800",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1b0ed9f3-a094-4a1b-af7f-654aa4dd18ab",
+          "comment": "",
+          "command": "type",
+          "target": "//input[@id='user-name']",
+          "targets": [
+            [
+              "//input[@id='user-name']",
+              "xpath:position"
+            ]
+          ],
+          "value": "standard_user"
+        },
+        {
+          "id": "71063040-f592-4be0-8c32-7f4bac3a6a69",
+          "comment": "",
+          "command": "type",
+          "target": "//input[@id='password']",
+          "targets": [
+            [
+              "//input[@id='password']",
+              "xpath:position"
+            ]
+          ],
+          "value": "secret_sauce"
+        },
+        {
+          "id": "8f1960d1-7b4a-442b-90c8-859d0a70660b",
+          "comment": "",
+          "command": "click",
+          "target": "//input[@id='login-button']",
+          "targets": [
+            [
+              "//input[@id='login-button']",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "606cbe9e-acb8-485a-815e-dc1815298b36",
+          "comment": "",
+          "command": "click",
+          "target": "//button[@id='add-to-cart-sauce-labs-backpack']",
+          "targets": [
+            [
+              "//button[@id='add-to-cart-sauce-labs-backpack']",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "86cdb7d1-510f-4f8f-9511-381bd4ddb45d",
+          "comment": "",
+          "command": "assertText",
+          "target": "//span[@class='shopping_cart_badge']",
+          "targets": [
+            [
+              "//span[@class='shopping_cart_badge']",
+              "xpath:position"
+            ]
+          ],
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "6e73ff1a-a382-4a4f-b02f-8a1c99dc7972",
+      "name": "Practica 1",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "0b584b23-b4e7-486e-9889-c35a258c6f9d",
+        "cf6d3518-8ce9-499a-9a3d-10cbc903106f",
+        "7df1c4bc-2770-4610-8e90-5618a8096dba"
+      ]
+    }
+  ],
+  "urls": [
+    "https://www.saucedemo.com/",
+    "https://the-internet.herokuapp.com/"
+  ],
+  "plugins": []
+}
