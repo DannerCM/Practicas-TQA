@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Automatizar tres pruebas web con Robot Framework y SeleniumLibrary. Cada caso usa variables, keywords propias, dos validaciones y una captura de pantalla.
+Automatizar tres pruebas web (SauceDemo, The Internet y búsqueda de productos en Automation Exercise) con Robot Framework y SeleniumLibrary. Cada caso usa variables, keywords propias, dos validaciones y una captura de pantalla.
 
 ## Requisitos
 
@@ -20,18 +20,18 @@ pip install -r requirements.txt
 ## Ejecución
 
 ```bash
-robot --outputdir resultados tests/
+robot --outputdir reports tests/
 ```
 
-Genera `report.html`, `log.html` y `output.xml` en `resultados/`. Las capturas quedan en `capturas/`.
+Genera `report.html`, `log.html` y `output.xml` en `reports/`. Las capturas quedan en `screenshots/`.
 
 ## Estructura
 
 ```
-tests/practica3.robot        tres casos de prueba
-resources/keywords.robot     keywords propias
-resources/variables.robot    URLs, usuarios y navegador
-capturas/                    una captura por caso
-resultados/                  report.html, log.html, output.xml
-requirements.txt             versiones fijadas
+tests/practica3.robot          tres casos de prueba
+keywords/keywords.robot        keywords propias
+variables/variables.robot      URLs, usuarios y navegador
+screenshots/                   una captura por caso
+reports/                       report.html, log.html, output.xml
+requirements.txt               versiones fijadas
 ```

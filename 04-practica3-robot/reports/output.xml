@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.13.3 on win32)" generated="2026-11-24T11:12:57.415915" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source=".\tests">
+<suite id="s1-s1" name="Practica3" source=".\tests\practica3.robot">
+<test id="s1-s1-t1" name="Ejercicio 1 Login Correcto En SauceDemo" line="7">
+<kw name="Abrir Navegador En" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:57.781452" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${url}</arg>
+<arg>${NAVEGADOR}</arg>
+<arg>options=add_argument("--window-size=1280,900")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T11:12:57.781241" elapsed="0.778544"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.560004" elapsed="0.000787"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.560911" elapsed="0.000758"/>
+</kw>
+<arg>${URL_SAUCEDEMO}</arg>
+<status status="PASS" start="2026-11-24T11:12:57.780488" elapsed="0.781264"/>
+</kw>
+<kw name="Iniciar Sesion En SauceDemo" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:58.562494" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.562192" elapsed="0.076674"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:58.639470" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${clave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.639129" elapsed="0.046931"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:58.686546" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.686310" elapsed="0.045926"/>
+</kw>
+<arg>${USUARIO_SAUCE}</arg>
+<arg>${CLAVE_SAUCE}</arg>
+<status status="PASS" start="2026-11-24T11:12:58.561899" elapsed="0.170447"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:58.761660" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>${URL_INVENTARIO}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.732486" elapsed="0.029268"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:58.762133" level="INFO">Verifying element 'class=title' contains exact text 'Products'.</msg>
+<arg>class=title</arg>
+<arg>Products</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.761914" elapsed="0.013308"/>
+</kw>
+<kw name="Capturar Pantalla" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:12:59.181588" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/ejercicio1-login-correcto.png"&gt;&lt;img src="../screenshots/ejercicio1-login-correcto.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${CARPETA_CAPTURAS}${/}${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-24T11:12:58.775743" elapsed="0.405934"/>
+</kw>
+<arg>ejercicio1-login-correcto</arg>
+<status status="PASS" start="2026-11-24T11:12:58.775436" elapsed="0.406330"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-24T11:12:59.181966" elapsed="2.126488"/>
+</kw>
+<status status="PASS" start="2026-11-24T11:12:57.779961" elapsed="3.528587"/>
+</test>
+<test id="s1-s1-t2" name="Ejercicio 2 Login Incorrecto En The Internet" line="14">
+<kw name="Abrir Navegador En" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:01.309718" level="INFO">Opening browser 'headlesschrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${NAVEGADOR}</arg>
+<arg>options=add_argument("--window-size=1280,900")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T11:13:01.309544" elapsed="1.724199"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.033989" elapsed="0.001112"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.035274" elapsed="0.000762"/>
+</kw>
+<arg>${URL_HEROKU_LOGIN}</arg>
+<status status="PASS" start="2026-11-24T11:13:01.309173" elapsed="1.726934"/>
+</kw>
+<kw name="Iniciar Sesion En Heroku" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:03.036937" level="INFO">Typing text 'usuario_inexistente' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.036687" elapsed="0.070267"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:03.107406" level="INFO">Typing text 'clave_incorrecta' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${clave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.107151" elapsed="0.048707"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:03.156227" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.156024" elapsed="0.053931"/>
+</kw>
+<arg>${USUARIO_INVALIDO}</arg>
+<arg>${CLAVE_INVALIDA}</arg>
+<status status="PASS" start="2026-11-24T11:13:03.036253" elapsed="0.173803"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:03.499530" level="INFO">Element 'id=flash' contains text 'Your username is invalid!'.</msg>
+<arg>id=flash</arg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.210188" elapsed="0.289449"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:03.504213" level="INFO">Current location contains '/login'.</msg>
+<arg>/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.499845" elapsed="0.004467"/>
+</kw>
+<kw name="Capturar Pantalla" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:03.568156" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/ejercicio2-login-incorrecto.png"&gt;&lt;img src="../screenshots/ejercicio2-login-incorrecto.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${CARPETA_CAPTURAS}${/}${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.504809" elapsed="0.063599"/>
+</kw>
+<arg>ejercicio2-login-incorrecto</arg>
+<status status="PASS" start="2026-11-24T11:13:03.504501" elapsed="0.064058"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-24T11:13:03.568845" elapsed="2.130348"/>
+</kw>
+<status status="PASS" start="2026-11-24T11:13:01.308831" elapsed="4.390491"/>
+</test>
+<test id="s1-s1-t3" name="Ejercicio 3 Busqueda De Productos En AutomationExercise" line="21">
+<kw name="Abrir Navegador En" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:05.700756" level="INFO">Opening browser 'headlesschrome' to base url 'https://automationexercise.com/products'.</msg>
+<arg>${url}</arg>
+<arg>${NAVEGADOR}</arg>
+<arg>options=add_argument("--window-size=1280,900")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T11:13:05.700506" elapsed="3.208531"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.909214" elapsed="0.001191"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.910594" elapsed="0.000997"/>
+</kw>
+<arg>${URL_AUTOMATION}</arg>
+<status status="PASS" start="2026-11-24T11:13:05.700045" elapsed="3.211662"/>
+</kw>
+<kw name="Buscar Producto En AutomationExercise" owner="keywords">
+<kw name="Cerrar Anuncios" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:08.912587" level="INFO">Executing JavaScript:
+document.querySelectorAll('button.fc-cta-consent').forEach(b =&gt; b.click());
+Without any arguments.</msg>
+<arg>document.querySelectorAll('button.fc-cta-consent').forEach(b =&gt; b.click());</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.912422" elapsed="0.007244"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:08.920031" level="INFO">Executing JavaScript:
+document.querySelectorAll('ins.adsbygoogle, iframe[id^=aswift], #ad_position_box, .google-auto-placed').forEach(e =&gt; e.remove());
+Without any arguments.</msg>
+<arg>document.querySelectorAll('ins.adsbygoogle, iframe[id^=aswift], #ad_position_box, .google-auto-placed').forEach(e =&gt; e.remove());</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.919876" elapsed="0.005114"/>
+</kw>
+<status status="PASS" start="2026-11-24T11:13:08.912201" elapsed="0.012883"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=search_product</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.925203" elapsed="0.011515"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:08.937141" level="INFO">Typing text 'shirt' into text field 'id=search_product'.</msg>
+<arg>id=search_product</arg>
+<arg>${termino}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.936902" elapsed="0.059169"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:08.996464" level="INFO">Clicking button 'id=submit_search'.</msg>
+<arg>id=submit_search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-24T11:13:08.996243" elapsed="1.193095"/>
+</kw>
+<kw name="Cerrar Anuncios" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:10.190198" level="INFO">Executing JavaScript:
+document.querySelectorAll('button.fc-cta-consent').forEach(b =&gt; b.click());
+Without any arguments.</msg>
+<arg>document.querySelectorAll('button.fc-cta-consent').forEach(b =&gt; b.click());</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-11-24T11:13:10.190045" elapsed="0.005060"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:10.195510" level="INFO">Executing JavaScript:
+document.querySelectorAll('ins.adsbygoogle, iframe[id^=aswift], #ad_position_box, .google-auto-placed').forEach(e =&gt; e.remove());
+Without any arguments.</msg>
+<arg>document.querySelectorAll('ins.adsbygoogle, iframe[id^=aswift], #ad_position_box, .google-auto-placed').forEach(e =&gt; e.remove());</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-11-24T11:13:10.195334" elapsed="0.004538"/>
+</kw>
+<status status="PASS" start="2026-11-24T11:13:10.189656" elapsed="0.010315"/>
+</kw>
+<arg>${TERMINO_BUSQUEDA}</arg>
+<status status="PASS" start="2026-11-24T11:13:08.911902" elapsed="1.288118"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:10.208962" level="INFO">Current page contains text 'Searched Products'.</msg>
+<arg>${TITULO_BUSQUEDA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-24T11:13:10.200145" elapsed="0.008898"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:10.214839" level="INFO">Current page contains element 'xpath=//div[@class='productinfo text-center']/p'.</msg>
+<arg>xpath=//div[@class='productinfo text-center']/p</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-11-24T11:13:10.209198" elapsed="0.005746"/>
+</kw>
+<kw name="Capturar Pantalla" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-24T11:13:10.320781" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/ejercicio3-busqueda.png"&gt;&lt;img src="../screenshots/ejercicio3-busqueda.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${CARPETA_CAPTURAS}${/}${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-24T11:13:10.215421" elapsed="0.105447"/>
+</kw>
+<arg>ejercicio3-busqueda</arg>
+<status status="PASS" start="2026-11-24T11:13:10.215134" elapsed="0.105819"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-24T11:13:10.321146" elapsed="2.140606"/>
+</kw>
+<status status="PASS" start="2026-11-24T11:13:05.699683" elapsed="6.762185"/>
+</test>
+<doc>Practica 3: tres ejercicios con Robot Framework y SeleniumLibrary.</doc>
+<status status="PASS" start="2026-11-24T11:12:57.457491" elapsed="15.004818"/>
+</suite>
+<status status="PASS" start="2026-11-24T11:12:57.417156" elapsed="15.045637"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
+<stat name="Practica3" id="s1-s1" pass="3" fail="0" skip="0">Tests.Practica3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

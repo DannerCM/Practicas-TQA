@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     Practica 3: tres ejercicios con Robot Framework y SeleniumLibrary.
-Resource          ../resources/keywords.robot
+Resource          ../keywords/keywords.robot
 Test Teardown     Close All Browsers
 
 *** Test Cases ***
@@ -18,11 +18,9 @@ Ejercicio 2 Login Incorrecto En The Internet
     Location Should Contain    /login
     Capturar Pantalla    ejercicio2-login-incorrecto
 
-Ejercicio 3 Agregar Producto Al Carrito En SauceDemo
-    Abrir Navegador En    ${URL_SAUCEDEMO}
-    Iniciar Sesion En SauceDemo    ${USUARIO_SAUCE}    ${CLAVE_SAUCE}
-    Agregar Producto Al Carrito
-    Element Text Should Be    class=shopping_cart_badge    1
-    Abrir Carrito
-    Element Text Should Be    class=inventory_item_name    ${PRODUCTO}
-    Capturar Pantalla    ejercicio3-carrito
+Ejercicio 3 Busqueda De Productos En AutomationExercise
+    Abrir Navegador En    ${URL_AUTOMATION}
+    Buscar Producto En AutomationExercise    ${TERMINO_BUSQUEDA}
+    Page Should Contain    ${TITULO_BUSQUEDA}
+    Page Should Contain Element    xpath=//div[@class='productinfo text-center']/p
+    Capturar Pantalla    ejercicio3-busqueda
